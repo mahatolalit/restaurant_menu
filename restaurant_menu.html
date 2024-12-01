@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draky's Bistro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #f8b400;
+            padding: 20px;
+            color: white;
+        }
+        #header-img {
+            width: 100%;
+            height: 500px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        section {
+            padding: 20px;
+        }
+        article {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        article img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Draky's Bistro</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#order-form">Place Your Order</a>
+        </nav>
+        <img id="header-img" src="#" alt="Restaurant Header">
+    </header>
+    
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article>
+                <img id="pizza-img" src="#" alt="Delicious Pizza">
+                <h3>Margherita Pizza</h3>
+                <p><em>$12.99</em> - Classic Italian pizza topped with fresh tomatoes, basil, and mozzarella.</p>
+            </article>
+            <article>
+                <img id="burger-img" src="#" alt="Juicy Burger">
+                <h3>Cheeseburger Deluxe</h3>
+                <p><em>$10.99</em> - Juicy beef patty with cheddar cheese, lettuce, and tomato.</p>
+            </article>
+            <article>
+                <img id="pasta-img" src="#" alt="Creamy Pasta">
+                <h3>Alfredo Pasta</h3>
+                <p><em>$11.99</em> - Creamy pasta served with a choice of chicken or veggies.</p>
+            </article>
+        </section>
+
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <form action="/checkout" method="post">
+                <label for="pizza-qty">Margherita Pizza:</label>
+                <input type="number" id="pizza-qty" name="pizza-qty" min="0" value="0">
+
+                <label for="burger-qty">Cheeseburger Deluxe:</label>
+                <input type="number" id="burger-qty" name="burger-qty" min="0" value="0">
+
+                <label for="pasta-qty">Alfredo Pasta:</label>
+                <input type="number" id="pasta-qty" name="pasta-qty" min="0" value="0">
+
+                <label>Add-Ons:</label>
+                <input type="checkbox" id="extra-cheese" name="add-ons" value="Extra Cheese">
+                <label for="extra-cheese">Extra Cheese</label>
+                <input type="checkbox" id="fries" name="add-ons" value="Fries">
+                <label for="fries">Fries</label>
+
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea>
+
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with love by @draky</p>
+    </footer>
+
+    <script>
+        // Image URLs
+        const headerImage = "https://graphicsfamily.com/wp-content/uploads/edd/2023/02/Restaurant-Logo-Design-2-1180x664.jpg";
+        const pizzaImage = "https://cookieandkate.com/images/2021/07/classic-margherita-pizza.jpg";
+        const burgerImage = "https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-cheeseburger-deluxe-1:product-header-desktop?wid=829&hei=455&dpr=off";
+        const pastaImage = "https://www.allrecipes.com/thmb/uhyjbhMrDwnrSC24augjHmfu-Sg=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-23431-to-die-for-fettuccine-alfredo-DDMFS-beauty-3x4-b64d36c7ff314cb39774e261c5b18352.jpg";
+
+        // Assign image URLs to elements
+        document.getElementById("header-img").src = headerImage;
+        document.getElementById("pizza-img").src = pizzaImage;
+        document.getElementById("burger-img").src = burgerImage;
+        document.getElementById("pasta-img").src = pastaImage;
+    </script>
+</body>
+</html>
